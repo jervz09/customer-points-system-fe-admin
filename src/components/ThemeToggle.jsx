@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(() =>
-    localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  const [isDark, setIsDark] = useState(
+    () =>
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
   );
 
   useEffect(() => {
@@ -34,4 +36,3 @@ export default function ThemeToggle() {
     </button>
   );
 }
-
