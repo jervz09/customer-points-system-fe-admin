@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 export default function SidebarUserInfo() {
   const user = JSON.parse(localStorage.getItem('user'));
   return (
@@ -13,6 +12,7 @@ export default function SidebarUserInfo() {
         <span className="text-sm text-gray-500 dark:text-gray-400">
           {user.role}
         </span>
+        <span className="text-xs text-gray-400">Last login: {user.lastLoginAt || new Date().toISOString().split('T')[0]}</span>
       </div>
     </div>
   );
