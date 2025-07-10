@@ -1,13 +1,21 @@
-import React from 'react';
-import Layout from './layouts/Layout';
+import { Routes, Route } from 'react-router-dom';
+import PrivateRoute from './components/PrivateRoute';
+import LoginPage from './pages/LoginPage';
+import Dashboard from './pages/Dashboard';
 import './index.css';
 
-export default function App() {
+function App() {
   return (
-    <Layout>
-      <div className="text-lg">Hello, this is the dashboard content.</div>
-    </Layout>
+    <Routes>
+      {/* Public Route */}
+      <Route path="/login" element={<LoginPage />} />
+
+      {/* Protected Routes */}
+      <Route element={<PrivateRoute />}>
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Route>
+    </Routes>
   );
 }
 
-
+export default App;

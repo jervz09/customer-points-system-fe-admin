@@ -5,6 +5,7 @@ A responsive admin dashboard built with **React**, **Tailwind CSS**, and **Frame
 ## 🚀 Features
 
 ### 👤 Admin / Operator Views
+
 - View and manage **clients**
 - Add / edit / soft-delete **promos**
 - View and manage **redeem logs**
@@ -12,6 +13,7 @@ A responsive admin dashboard built with **React**, **Tailwind CSS**, and **Frame
 - Responsive **sidebar with animations**
 
 ### 📱 Client View (Planned)
+
 - Scan QR to view total & remaining points
 - View redeem history
 - Download printable QR code

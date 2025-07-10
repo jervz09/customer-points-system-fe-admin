@@ -8,20 +8,22 @@ export function ThemeProvider({ children }) {
 
   useEffect(() => {
     const stored = localStorage.getItem('theme');
-    
+
     // ✅ If "dark" is stored, apply dark
     if (stored === 'dark') {
       document.documentElement.classList.add('dark');
       setIsDark(true);
-    
-    // ✅ If "light" is stored, make sure dark is removed
+
+      // ✅ If "light" is stored, make sure dark is removed
     } else if (stored === 'light') {
       document.documentElement.classList.remove('dark');
       setIsDark(false);
-    
-    // ✅ If no storage at all, fallback to system
+
+      // ✅ If no storage at all, fallback to system
     } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const prefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
       if (prefersDark) {
         document.documentElement.classList.add('dark');
         setIsDark(true);

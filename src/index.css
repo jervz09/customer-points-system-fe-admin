@@ -8,7 +8,9 @@ body {
 
 html {
   @apply transition-all duration-500 ease-in-out;
-  transition: background-color 0.5s, color 0.5s;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
 }
 
 /* in index.css or App.css */
